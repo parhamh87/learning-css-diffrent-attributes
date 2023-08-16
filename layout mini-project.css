@@ -1,0 +1,334 @@
+*{
+ opacity: calc(none);
+}
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto&display=swap');
+body{
+    text-align : center;
+    font-size: 30px;
+    font-family: 'Noto Sans Cypro Minoan', sans-serif;
+}
+.header::selection{
+    background-color: red;
+    color: aqua;
+}
+.header{
+    height: 80px;
+    background:linear-gradient(to bottom, rgb(255, 204, 19) , rgb(235, 176, 0))
+}
+.article{
+    float: left;
+    height: 200px;
+    width: 75%;
+    background-color: rgb(37, 197, 255);
+}
+.container::before{
+    content: 'milad' ;
+    background-color: chartreuse;
+    color: aliceblue;
+    display: block;
+}
+.article::first-letter{
+    font-family: sans-serif;
+    color: rgb(255, 0, 0);
+    font-size: 80px;
+}
+.sidebar{
+    height: 200px;
+    float: right;
+    width: 25%;
+    background-color:  lightblue;
+}
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.footer{
+    height: 80px;
+    background-color: rgb(255, 217, 102);
+}
+
+/* table */
+th , td {
+    border: solid black 2px;
+    padding: 10px;
+   
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:nth-child(even){
+    background-color: #ebebebf3;
+}
+tr:hover{
+    background-color: #ddd;
+}
+th{
+    background-color: #04aa6d;
+    color: #ddd;
+}
+/* design a that its title is google-com*/
+a[title ~= google-com]{
+    background-color: #04aa6d;
+    color: black;
+}
+/* design a that its target ends with f*/
+a[target$="f"]{
+    background-color: rgb(101, 13, 183);
+    color: #ddd;
+/*design a tag that its href has # letter */
+}
+a[href *= '#']{
+    border: solid black 2px;
+}
+/**/
+
+.animation{
+    width: 300px;
+    height: 200px;
+    background-color: #04aa6d;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove{
+    from{background-color: #04aa6d}
+    to{background-color: green;}
+}
+iframe[src *= 'cssscan']{
+    border: groove blue 10px;
+}
+video:nth-of-type(1){
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+}
+/* linear-gradient*/
+.linear-gradients{
+    display: flex;
+    justify-content: space-around;
+}
+div[class*=  'l-grad']{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to left , yellow ,rgb(115, 156, 0), green);
+}
+div[ class *= deg]{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(190deg , red , green , blue);
+}
+/*color-step*/
+.color-step{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right , red , green 60% , blue);
+}
+.color-step::before{
+    content: 'color step with  green 60%';
+    color: #ffffff;
+    width: 250px;
+    position: absolute;
+    right: 490px;
+}
+.color-step-2{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right , red , green 20% ,green 60%, blue);
+}
+.color-step-2::before{
+    content: 'color step with  green 20% to 60%';
+    color: #ffffff;
+    width: 250px;
+    position: absolute;
+    right: 170px;
+}
+
+/* Radial-Gradients*/
+
+.r-gradient{
+     display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient( yellow ,rgb(115, 156, 0), green);
+}
+.r-three-gradient{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient( red ,red 20% , green 20% , blue);
+}
+.position-1{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center right , red , red, green, green 25% , blue)
+}
+.position-2{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at top left , red , red, green, green 25% , blue)
+}
+/**/
+.r-linear-gradients{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+div[class*=  'reapit-grad']{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background: repeating-linear-gradient(to left , yellow ,rgb(115, 156, 0) 0%, green 30%);
+}
+.me{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+     background: repeating-linear-gradient(to right , red 0% , blue 25%);
+}
+.step-grad{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background: repeating-linear-gradient(to right , red 0% ,green 8% ,green 10% ,   blue 25%);
+}
+/*repeaating-radial-gradient*/
+
+.r-r-gradient{
+   display: flex;
+   justify-content: space-around;
+}
+
+.rapeat-radial-1{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background: repeating-radial-gradient(circle , yellow 0% , green 30%)
+}
+.repeat-radial-2{
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background: repeating-radial-gradient(circle , red , green , blue 25% )
+}
+
+/* css-blemd-mode*/
+.blend-mode{
+    width: 800px;
+    height: 400px;
+    border: groove red 4px;
+    margin: auto;
+    background-image: url(monaco.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04aa6d;
+    background-blend-mode: difference;
+}
+
+/* mix-blend-mode*/
+.mix-blend-mode-text{
+    width: 800px;
+    height: 400px;
+    border: groove red 4px;
+    margin: auto;
+    background-image: url(monaco.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.mix-blend-mode-text h2{
+    font-size: 100px;
+    font-weight: 300;
+    font-family: 'Caprasimo';
+    mix-blend-mode: overlay;
+    
+}
+/* mix-image*/
+.mix-blend-image {
+    width: 800px;
+    height: 400px;
+    border: groove red 4px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-image: url(monaco.jpg);
+    position: relative;
+}
+.mix-blend-image img{
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    right: 400px;
+    mix-blend-mode: overlay;
+}
+/* shapes */
+
+/* inset() */
+.inset{
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    margin: auto;
+    clip-path: polygon(20px );
+}
+
+/* circle () */
+
+.circle-all{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.circle{
+
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    margin: auto;
+    clip-path: circle(150px at bottom  );
+}
+.clip-circle{
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    clip-path: circle();
+}
+.ellips{
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    margin: auto;
+    clip-path: ellipse(90px 130px); /* pishfarz ==> clip-path: ellipse(closest-side farthest-side at center); */
+}
+
+/* polygon */
+
+.polygon-rec{
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    margin: auto;
+    clip-path: polygon( 50% 0 , 0% 100% , 100% 100% );
+}
+.polygon-rec::before{
+    content: 'rectengle';
+    font-size: xx-large;
+    position: relative;
+    top: 200px;
+}
+
+.polygon-five{
+    width: 300px;
+    height: 300px;
+    border: solid rgb(251, 255, 0) 4px;
+    background-color: #04aa6d;
+    margin: auto;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
